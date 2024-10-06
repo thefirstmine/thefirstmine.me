@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <title>thefirstmine.</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+
+            * {
+                font-family: "DM Mono", monospace !important;
+                color: #E2E2B6 !important;
+                padding: 0;
+                background-color: #021526;
+            }
+
+            .typewriter h1 {
+                overflow: hidden; /* Ensures the content is not revealed until the animation */
+                border-right: .15em solid #6EACDA; /* The typwriter cursor */
+                white-space: nowrap; /* Keeps the content on a single line */
+                margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+                letter-spacing: .15em; /* Adjust as needed */
+                max-width: fit-content; /* Ensures the width is only as wide as the text */
+                animation: 
+                    typing 3.5s steps(70, end),
+                    blink-caret 1s step-end infinite;
+                animation-fill-mode: forwards; /* Ensures the animation stays at the end state */
+            }
+
+            @media (max-width: 576px) {
+                .typewriter h1 {
+                    font-size: 1.25rem; /* Adjust font size for smaller screens */
+                    letter-spacing: .1em; /* Adjust letter spacing for smaller screens */
+                }
+
+                #whoami {
+                    font-size: 1rem !important; /* Adjust button font size for smaller screens */
+                }
+            }
+            /* The typing effect */
+            @keyframes typing {
+                from { width: 0 }
+                to { width: 100% }
+            }
+
+            /* The typewriter cursor effect */
+            @keyframes blink-caret {
+                from, to { border-color: transparent }
+                50% { border-color: #6EACDA; }
+            }
+
+            #whoami {
+                opacity: 0;
+                transition: opacity 0.5s ease-in-out;
+                animation: showButton 1s forwards 1.5s;
+            }
+
+            a .btn::after {
+                content: ' ';
+                display: block;
+                width: 0;
+                height: 2px;
+                background: white;
+                transition: width .3s;
+            }
+
+            a .btn:hover::after {
+                width: 100%;
+            }
+
+            @keyframes showButton {
+                to {
+                    opacity: 1;
+                }
+            }
+            .bord {
+                border: 1px solid #6EACDA; 
+                padding: 20px; 
+                border-radius: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">thefirstmine.</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#about" class="nav-link">about</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#contacts" class="nav-link">contacts</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <div id="main">
+            <div class="typewriter d-flex flex-column justify-content-center align-items-center" style="height: 100vh;">
+                <h1>hey! welcome to my home.</h1>
+                <a class="btn btn-outline-primary mt-3 bord" href="#about" role="button" style="font-size: 1.5rem;" id="whoami">who am i? →</a>
+            </div>
+        </div>
+        <div class="mx-auto d-flex flex-column justify-content-center align-items-center" id="about" style="padding-top: 56px; height: 100vh;">
+            <div class="bord">
+                <p class="h2">about me :o</p>
+                <p>called thefirstmine, tfm, or julian</p>
+                <p>he/him, esfp-t 9w8</p>
+                <p>mostly a "geek"</p>
+                <p>in the hell called highschool.</p>
+                <p>interests</p>
+                <ul>
+                    <li>programming</li>
+                    <li>gaming</li>
+                    <li>aviation</li>
+                </ul>
+                <div>
+                    <div class="row">
+                        <div class="col">
+                            <p>languages</p>
+                            <ul>
+                                <li>python</li>
+                                <li>javascript</li>
+                                <li>php</li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <p>tools</p>
+                            <ul>
+                                <li>vscode</li>
+                                <li>git</li>
+                                <li>linux</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="btn btn-outline-primary mt-3 bord" href="#contacts" role="button" style="font-size: 1.25rem;">contacts/links →</a>
+        </div>
+        <div class="mx-auto d-flex flex-column justify-content-center align-items-center" id="contacts" style="padding-top: 56px; height: 100vh;">
+            <div class="bord">
+                <p class="h2">contacts/links</p>
+                <p>discord: thefirstmine_ph</p>
+                <!-- list of social media buttons with their respective names, placeholder image for logo -->
+                <div class="row justify-content-center">
+                    <div class="col">
+                        <a href="https://github.com/thefirstmine" class="btn mt-3 bord" role="button">
+                            <img src="https://cdn.jsdelivr.net/gh/selfhst/icons/svg/github-light.svg" alt="" style="width: 50px; height: 50px;">
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="https://github.com/thefirstmine/thefirstmine.me" class="btn mt-3 bord" role="button">
+                            <img src="https://cdn.jsdelivr.net/gh/selfhst/icons/svg/coder-light.svg" alt="" style="width: 50px; height: 50px;">
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="mailto:julian@thefirstmine.me" class="btn mt-3 bord" role="button">
+                            <img src="https://cdn.jsdelivr.net/gh/selfhst/icons/svg/mailgun-light.svg" alt="" style="width: 50px; height: 50px;">
+                        </a>
+                    </div> 
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </body>
+</html>
